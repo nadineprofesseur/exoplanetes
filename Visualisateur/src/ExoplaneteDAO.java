@@ -21,6 +21,7 @@ public class ExoplaneteDAO {
 		while(visiteurExoplanete.hasNext())
 		{
 			Exoplanete exoplanete = (Exoplanete)visiteurExoplanete.next();
+			listeExoplanete.add(exoplanete); 
 			System.out.println("Planete " + exoplanete.getNom());
 		}
 				
