@@ -20,6 +20,7 @@ public class NavigateurDesVues extends Application {
 	public void start(Stage stade) throws Exception {
 		this.stade = stade;
 		this.stade.setScene(this.pageListeExoplanete); // TODO FAIT : dire quelle vue afficher en premier
+		this.pageListeExoplanete.afficherListeExoplanetes("terre + mars");
 		// TODO : activer dans le controleur la premiere vue
 		this.stade.show();
 	}

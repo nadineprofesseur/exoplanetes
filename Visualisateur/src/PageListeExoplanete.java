@@ -9,9 +9,12 @@ public class PageListeExoplanete extends Page {
 	public PageListeExoplanete() throws IOException {
 		super(FXMLLoader.load(PageListeExoplanete.class.getResource("liste-exoplanetes.fxml")));
 		
-		TextArea espaceTexte = (TextArea) this.lookup("#liste-exoplanetes");
-		espaceTexte.appendText("coucou");
 	}
-	
+	public void afficherListeExoplanetes(String listeExoplanetes)
+	{
+		TextArea espaceTexte = (TextArea) this.lookup("#liste-exoplanetes");
+		espaceTexte.appendText(listeExoplanetes);		
+	}
+
 
 }
