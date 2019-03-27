@@ -1,7 +1,8 @@
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.control.TextArea;
 
 public class PageListeExoplanete extends Page {
@@ -10,10 +11,13 @@ public class PageListeExoplanete extends Page {
 		super(FXMLLoader.load(PageListeExoplanete.class.getResource("liste-exoplanetes.fxml")));
 		
 	}
-	public void afficherListeExoplanetes(String listeExoplanetes)
+	public void afficherListeExoplanetes(List<Exoplanete> listeExoplanetes)
 	{
 		TextArea espaceTexte = (TextArea) this.lookup("#liste-exoplanetes");
-		espaceTexte.appendText(listeExoplanetes);		
+		for(Exoplanete exoplanete : listeExoplanetes)
+		{
+			espaceTexte.appendText(exoplanete.getNom() + "\n");					
+		}
 	}
 
 
