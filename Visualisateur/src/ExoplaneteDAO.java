@@ -22,11 +22,11 @@ public class ExoplaneteDAO {
 		{
 			Exoplanete exoplanete = (Exoplanete)visiteurExoplanete.next();
 			listeExoplanete.add(exoplanete); 
-			System.out.println("Planete " + exoplanete.getNom());
+			//System.out.println("Planete " + exoplanete.getNom());
 		}
 				
-		session.close();
-		generateurSession.close();
+		//session.close();
+		//generateurSession.close();
 		
 		return listeExoplanete;
 	}

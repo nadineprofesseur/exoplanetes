@@ -1,9 +1,18 @@
+import java.util.List;
+
 public class App {
 
-	public static void main(String[] args) {
+	public static void main(String[] parametres) {
 
 		ExoplaneteDAO exoplaneteDAO = new ExoplaneteDAO();
-		exoplaneteDAO.listerExoplanete();		
+		List<Exoplanete> liste = exoplaneteDAO.listerExoplanete();		
+		
+		for(Exoplanete exoplanete : liste)
+		{
+			System.out.println(exoplanete.getNom());
+		}
+		
+		NavigateurDesVues.launch(NavigateurDesVues.class, parametres);
 	}
 
 }

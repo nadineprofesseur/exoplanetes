@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Label layoutX="38.0" layoutY="41.0" prefHeight="40.0" prefWidth="399.0" text="Liste des exoplanètes" textFill="#992500">
+      <font>
+        <Font name="System Bold" size="30.0" />
+      </font>
+    </Label>
+    <TextArea id="liste-exoplanetes" fx:id="listeExoplanetes" editable="false" layoutX="38.0" layoutY="95.0" prefHeight="257.0" prefWidth="531.0" style=" -fx-background-color: palegoldenrod;" wrapText="true" />
+  </children>
+</AnchorPane>
