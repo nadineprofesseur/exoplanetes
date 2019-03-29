@@ -1,9 +1,8 @@
 
 public class ControleurExoplanete {
 
-	
-	
 	protected NavigateurDePages navigateur;
+	
 	public ControleurExoplanete()
 	{
 		System.out.println("new ControleurExoplanete()");
