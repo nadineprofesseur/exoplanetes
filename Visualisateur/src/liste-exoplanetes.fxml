@@ -15,5 +15,6 @@
       </font>
     </Label>
     <TextArea id="liste-exoplanetes" fx:id="listeExoplanetes" editable="false" layoutX="38.0" layoutY="95.0" prefHeight="257.0" prefWidth="531.0" style=" -fx-background-color: palegoldenrod;" wrapText="true" />
+    <Button id="actionNaviguerPageExoplanete" layoutX="169.0" layoutY="43.0" mnemonicParsing="false" text="Ouvrir la page Exoplanete" />
   </children>
 </AnchorPane>

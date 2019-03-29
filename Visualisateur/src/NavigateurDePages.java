@@ -38,13 +38,24 @@ public class NavigateurDePages extends Application {
 	@Override
 	public void start(Stage stade) throws Exception {
 		this.stade = stade;
-		this.stade.setScene(this.pageExoplanete); // pour dire quelle vue afficher en premier
+		this.stade.setScene(this.pageListeExoplanete); // pour dire quelle vue afficher en premier
 		//this.pageListeExoplanete.afficherListeExoplanetes("terre + mars");
  		// TODO : activer dans le controleur la premiere vue
 		this.stade.show();
+		
+		//this.naviguerVersPageExoplanete();
+		//this.naviguerVersPageListeExoplanete();
 	}
 
+	public void naviguerVersPageExoplanete()
+	{
+		this.stade.setScene(this.pageExoplanete); 	
+	}
 	
+	public void naviguerVersPageListeExoplanete()
+	{
+		this.stade.setScene(this.pageListeExoplanete); 	
+	}
 	
 	
 }
