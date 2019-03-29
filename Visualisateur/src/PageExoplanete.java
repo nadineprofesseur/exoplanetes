@@ -1,4 +1,11 @@
+import java.io.IOException;
 
-public class PageExoplanete {
+import javafx.fxml.FXMLLoader;
+
+public class PageExoplanete extends Page {
+
+	public PageExoplanete() throws IOException {
+		super(FXMLLoader.load(PageListeExoplanete.class.getResource("exoplanete.fxml")));
+	}
 
 }

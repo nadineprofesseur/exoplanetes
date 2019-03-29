@@ -5,6 +5,7 @@ import javafx.stage.Stage;
 
 public class NavigateurDePages extends Application {
 	protected PageListeExoplanete pageListeExoplanete;
+	protected PageExoplanete pageExoplanete;
 	protected Stage stade;
 	protected ControleurExoplanete controleur;
 	
@@ -14,6 +15,7 @@ public class NavigateurDePages extends Application {
 		
 		try {
 			this.pageListeExoplanete = new PageListeExoplanete();
+			this.pageExoplanete = new PageExoplanete();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -36,7 +38,7 @@ public class NavigateurDePages extends Application {
 	@Override
 	public void start(Stage stade) throws Exception {
 		this.stade = stade;
-		this.stade.setScene(this.pageListeExoplanete); // TODO FAIT : dire quelle vue afficher en premier
+		this.stade.setScene(this.pageExoplanete); // pour dire quelle vue afficher en premier
 		//this.pageListeExoplanete.afficherListeExoplanetes("terre + mars");
  		// TODO : activer dans le controleur la premiere vue
 		this.stade.show();

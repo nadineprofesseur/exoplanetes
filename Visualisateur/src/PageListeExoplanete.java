@@ -8,8 +8,7 @@ import javafx.scene.control.TextArea;
 public class PageListeExoplanete extends Page {
 
 	public PageListeExoplanete() throws IOException {
-		super(FXMLLoader.load(PageListeExoplanete.class.getResource("liste-exoplanetes.fxml")));
-		
+		super(FXMLLoader.load(PageListeExoplanete.class.getResource("liste-exoplanetes.fxml")));		
 	}
 	public void afficherListeExoplanetes(List<Exoplanete> listeExoplanetes)
 	{

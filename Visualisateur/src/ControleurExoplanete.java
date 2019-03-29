@@ -9,7 +9,7 @@ public class ControleurExoplanete {
 		
 		ExoplaneteDAO exoplaneteDAO = new ExoplaneteDAO();
 		this.navigateur = NavigateurDePages.getInstance();
-		this.navigateur.getPageListeExoplanete().afficherListeExoplanetes(exoplaneteDAO.listerExoplanete());
+		//this.navigateur.getPageListeExoplanete().afficherListeExoplanetes(exoplaneteDAO.listerExoplanete());
 	}
 	
 }
