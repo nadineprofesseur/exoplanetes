@@ -3,18 +3,22 @@ import java.io.IOException;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-public class NavigateurDesVues extends Application {
+public class NavigateurDePages extends Application {
 	protected PageListeExoplanete pageListeExoplanete;
 	protected Stage stade;
+	protected ControleurExoplanete controleur;
 	
-	public NavigateurDesVues()
+	public NavigateurDePages()
 	{
-		NavigateurDesVues.instance = this;
+		NavigateurDePages.instance = this;
+		
 		try {
 			this.pageListeExoplanete = new PageListeExoplanete();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		this.controleur = new ControleurExoplanete();		
 	}
 
 	public PageListeExoplanete getPageListeExoplanete() {
@@ -22,8 +26,8 @@ public class NavigateurDesVues extends Application {
 	}
 
 	// semi-singleton
-	protected static NavigateurDesVues instance = null;
-	public static NavigateurDesVues getInstance()
+	protected static NavigateurDePages instance = null;
+	public static NavigateurDePages getInstance()
 	{
 		return instance;
 	}

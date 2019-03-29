@@ -10,6 +10,7 @@ public class ExoplaneteDAO {
 	
 	public List<Exoplanete> listerExoplanete()
 	{
+		System.out.println("ExoplaneteDAO.listerExoplanete()");
 		List<Exoplanete> listeExoplanete = new ArrayList<Exoplanete>();
 		
 		Configuration configuration = new Configuration();
@@ -22,7 +23,7 @@ public class ExoplaneteDAO {
 		{
 			Exoplanete exoplanete = (Exoplanete)visiteurExoplanete.next();
 			listeExoplanete.add(exoplanete); 
-			//System.out.println("Planete " + exoplanete.getNom());
+			System.out.println("DAO Planete " + exoplanete.getNom());
 		}
 				
 		//session.close();
