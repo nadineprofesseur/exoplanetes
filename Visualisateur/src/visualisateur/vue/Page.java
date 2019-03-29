@@ -1,3 +1,4 @@
+package visualisateur.vue;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 

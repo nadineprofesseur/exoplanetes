@@ -1,7 +1,9 @@
+package visualisateur.vue;
 import java.io.IOException;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
+import visualisateur.action.ControleurExoplanete;
 
 public class NavigateurDePages extends Application {
 	protected PageListeExoplanete pageListeExoplanete;
@@ -37,14 +39,12 @@ public class NavigateurDePages extends Application {
 	
 	@Override
 	public void start(Stage stade) throws Exception {
+		this.controleur.initialiser();
 		this.stade = stade;
 		this.stade.setScene(this.pageListeExoplanete); // pour dire quelle vue afficher en premier
 		//this.pageListeExoplanete.afficherListeExoplanetes("terre + mars");
  		// TODO : activer dans le controleur la premiere vue
 		this.stade.show();
-		
-		//this.naviguerVersPageExoplanete();
-		//this.naviguerVersPageListeExoplanete();
 	}
 
 	public void naviguerVersPageExoplanete()
