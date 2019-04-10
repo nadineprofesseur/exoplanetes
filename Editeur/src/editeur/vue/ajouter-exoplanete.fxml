@@ -35,7 +35,7 @@
             <Label text="Distance" />
             <TextField id="champs-distance" prefWidth="200.0" />
           </children>
-			<Button layoutX="159.0" layoutY="393.0" mnemonicParsing="false" prefWidth="174.0" style="-fx-background-color: blue; &#10;-fx-text-fill:white;&#10;-fx-font-family: &quot;Segoe UI Semibold&quot;;" text="Enregistrer" />
+		  <Button onAction="#recevoirActionEnregistrerAjout" layoutX="159.0" layoutY="393.0" mnemonicParsing="false" prefWidth="174.0" style="-fx-background-color: blue; &#10;-fx-text-fill:white;&#10;-fx-font-family: &quot;Segoe UI Semibold&quot;;" text="Enregistrer" />
         </VBox>
       </children>
     </Pane>

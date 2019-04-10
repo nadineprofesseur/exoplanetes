@@ -44,6 +44,16 @@ public class ControleurExoplanete implements Initializable{
 		// pas implémenté dans cette version
 	}
 	
+	public void recevoirActionEnregistrerAjout(ActionEvent evenement)
+	{
+		this.navigateur.naviguerVersPageListeExoplanete();		
+	}
+	
+	public void recevoirActionEnregistrerEdition(ActionEvent evenement)
+	{
+		this.navigateur.naviguerVersPageListeExoplanete();		
+	}
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
