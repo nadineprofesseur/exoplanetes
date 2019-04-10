@@ -31,6 +31,12 @@ public class PageEditerExoplanete extends Page {
 	
 	public void afficherExoplanete(Exoplanete exoplanete)
 	{
+		TextField champsNom = (TextField) this.lookup("#champs-nom");
+		champsNom.setText(exoplanete.getNom());
+		TextField champsEtoile = (TextField) this.lookup("#champs-etoile");
+		champsEtoile.setText(exoplanete.getEtoile());
+		
+		// TODO afficher tous les champs
 		
 	}
 	

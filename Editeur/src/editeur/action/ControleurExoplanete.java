@@ -46,7 +46,7 @@ public class ControleurExoplanete implements Initializable{
 		Exoplanete exoplanete = this.exoplaneteDAO.lireExoplaneteSelonNom(nom);
 		System.out.println(exoplanete.getEtoile());
 		// Afficher la bonne planete dans la page editer
-		
+		this.navigateur.getPageEditerExoplanete().afficherExoplanete(exoplanete);
 		// Naviguer vers la page editer
 		this.navigateur.naviguerVersPageEditer();
 	}
