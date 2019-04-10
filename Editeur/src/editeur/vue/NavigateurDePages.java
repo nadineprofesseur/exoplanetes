@@ -51,9 +51,17 @@ public class NavigateurDePages extends Application {
 		this.stade.show();
 	}
 
-	public void naviguerVersPageExoplanete()
+	public void naviguerVersPageAjouter()
 	{
-		this.stade.setScene(this.pageExoplanete); 	
+		this.stade.setScene(this.pageAjouterExoplanete); 	
+	}
+	
+	public void naviguerVersPageEditer()
+	{
+		// determiner quelle est la planete selectionnee
+		// charger les donnees
+		// afficher les donnees dans la page editer
+		this.stade.setScene(this.pageEditerExoplanete); 	
 	}
 	
 	public void naviguerVersPageListeExoplanete()

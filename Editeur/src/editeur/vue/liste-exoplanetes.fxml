@@ -15,8 +15,8 @@
       </font>
     </Label>
     <ListView id="liste-exoplanetes" layoutX="38.0" layoutY="163.0" prefHeight="200.0" prefWidth="200.0" />
-    <Button id="action-ajouter-exoplanete" layoutX="38.0" layoutY="102.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="454.0" style="-fx-background-color: blue; &#10;-fx-text-fill:white;&#10;-fx-font-family: &quot;Segoe UI Semibold&quot;;" text="Ajouter" />
-    <Button id="action-editer-exoplanete" layoutX="267.0" layoutY="163.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: blue; &#10;-fx-text-fill:white;&#10;-fx-font-family: &quot;Segoe UI Semibold&quot;;" text="Editer" />
-    <Button id="action-effacer-exoplanete" layoutX="267.0" layoutY="221.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: blue; &#10;-fx-text-fill:white;&#10;-fx-font-family: &quot;Segoe UI Semibold&quot;;" text="Effacer" />
+    <Button id="action-ajouter-exoplanete" onAction="#recevoirActionNaviguerPageAjouter" layoutX="38.0" layoutY="102.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="454.0" style="-fx-background-color: blue; &#10;-fx-text-fill:white;&#10;-fx-font-family: &quot;Segoe UI Semibold&quot;;" text="Ajouter" />
+    <Button id="action-editer-exoplanete"  onAction="#recevoirActionNaviguerPageEditer" layoutX="267.0" layoutY="163.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: blue; &#10;-fx-text-fill:white;&#10;-fx-font-family: &quot;Segoe UI Semibold&quot;;" text="Editer" />
+    <Button id="action-effacer-exoplanete"  onAction="#recevoirActionNaviguerPageEffacer" layoutX="267.0" layoutY="221.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: blue; &#10;-fx-text-fill:white;&#10;-fx-font-family: &quot;Segoe UI Semibold&quot;;" text="Effacer" />
   </children>
 </AnchorPane>

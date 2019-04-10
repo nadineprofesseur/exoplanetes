@@ -28,11 +28,22 @@ public class ControleurExoplanete implements Initializable{
 	{
 		this.navigateur.naviguerVersPageListeExoplanete();
 	}
-	public void recevoirActionNaviguerPageExoplanete(ActionEvent evenement)
-	{
-		this.navigateur.naviguerVersPageExoplanete();
-	}
 
+	public void recevoirActionNaviguerPageAjouter(ActionEvent evenement)
+	{
+		this.navigateur.naviguerVersPageAjouter();
+	}
+	
+	public void recevoirActionNaviguerPageEditer(ActionEvent evenement)
+	{
+		this.navigateur.naviguerVersPageEditer();
+	}
+	
+	public void recevoirActionNaviguerPageEffacer(ActionEvent evenement)
+	{
+		// pas implémenté dans cette version
+	}
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
