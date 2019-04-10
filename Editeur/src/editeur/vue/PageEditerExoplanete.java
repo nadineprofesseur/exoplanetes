@@ -1,9 +1,9 @@
-package visualisateur.vue;
+package editeur.vue;
 import java.io.IOException;
 
+import editeur.modele.Exoplanete;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import visualisateur.modele.Exoplanete;
 
 public class PageEditerExoplanete extends Page {
 

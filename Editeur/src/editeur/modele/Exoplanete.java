@@ -1,4 +1,4 @@
-package visualisateur.modele;
+package editeur.modele;
 // id nom etoile classe masse rayon flux temperature periode distance
 public class Exoplanete {
 	

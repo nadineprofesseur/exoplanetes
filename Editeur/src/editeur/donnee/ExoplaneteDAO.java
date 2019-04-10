@@ -1,4 +1,4 @@
-package visualisateur.donnee;
+package editeur.donnee;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -7,7 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import visualisateur.modele.Exoplanete;
+import editeur.modele.Exoplanete;
 
 public class ExoplaneteDAO {
 	
@@ -17,7 +17,7 @@ public class ExoplaneteDAO {
 		List<Exoplanete> listeExoplanete = new ArrayList<Exoplanete>();
 		
 		Configuration configuration = new Configuration();
-		configuration.addClass(visualisateur.modele.Exoplanete.class);
+		configuration.addClass(editeur.modele.Exoplanete.class);
 		SessionFactory generateurSession = configuration.buildSessionFactory();
 		Session session = generateurSession.openSession();
 		

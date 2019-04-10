@@ -1,6 +1,6 @@
 import java.util.List;
 
-import visualisateur.vue.NavigateurDePages;
+import editeur.vue.NavigateurDePages;
 
 public class App {
 

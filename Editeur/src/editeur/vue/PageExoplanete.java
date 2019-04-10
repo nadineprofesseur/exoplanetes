@@ -1,4 +1,4 @@
-package visualisateur.vue;
+package editeur.vue;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;

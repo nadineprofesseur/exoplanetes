@@ -1,14 +1,14 @@
-package visualisateur.vue;
+package editeur.vue;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import editeur.modele.Exoplanete;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
-import visualisateur.modele.Exoplanete;
 
 public class PageListeExoplanete extends Page {
 

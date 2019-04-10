@@ -1,11 +1,11 @@
-package visualisateur.action;
+package editeur.action;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import editeur.donnee.ExoplaneteDAO;
+import editeur.vue.NavigateurDePages;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-import visualisateur.donnee.ExoplaneteDAO;
-import visualisateur.vue.NavigateurDePages;
 
 public class ControleurExoplanete implements Initializable{
 
