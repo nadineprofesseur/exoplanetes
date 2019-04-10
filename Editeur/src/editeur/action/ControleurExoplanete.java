@@ -49,7 +49,8 @@ public class ControleurExoplanete implements Initializable{
 	{
 		// demander a la vue ses donnees
 		Exoplanete exoplanete = this.navigateur.getPageAjouterExoplanete().lireExoplanete();
-		
+		System.out.println("Nouvelle planete " + exoplanete.getNom() + " dans l'etoile " + exoplanete.getEtoile());
+
 		this.navigateur.naviguerVersPageListeExoplanete();		
 	}
 	
