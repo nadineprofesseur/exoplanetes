@@ -7,7 +7,6 @@ import javafx.stage.Stage;
 
 public class NavigateurDePages extends Application {
 	protected PageListeExoplanete pageListeExoplanete;
-	protected PageExoplanete pageExoplanete;
 	protected PageAjouterExoplanete pageAjouterExoplanete;
 	protected PageEditerExoplanete pageEditerExoplanete;
 	protected Stage stade;
@@ -19,7 +18,6 @@ public class NavigateurDePages extends Application {
 		
 		try {
 			this.pageListeExoplanete = new PageListeExoplanete();
-			this.pageExoplanete = new PageExoplanete();
 			this.pageAjouterExoplanete = new PageAjouterExoplanete();
 			this.pageEditerExoplanete = new PageEditerExoplanete();
 		} catch (IOException e) {
@@ -28,7 +26,15 @@ public class NavigateurDePages extends Application {
 		
 		this.controleur = new ControleurExoplanete();		
 	}
+	
+	public PageAjouterExoplanete getPageAjouterExoplanete() {
+		return pageAjouterExoplanete;
+	}
 
+	public PageEditerExoplanete getPageEditerExoplanete() {
+		return pageEditerExoplanete;
+	}
+	
 	public PageListeExoplanete getPageListeExoplanete() {
 		return pageListeExoplanete;
 	}
@@ -55,7 +61,7 @@ public class NavigateurDePages extends Application {
 	{
 		this.stade.setScene(this.pageAjouterExoplanete); 	
 	}
-	
+
 	public void naviguerVersPageEditer()
 	{
 		// determiner quelle est la planete selectionnee

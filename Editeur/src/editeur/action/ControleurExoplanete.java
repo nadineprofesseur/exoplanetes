@@ -3,6 +3,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import editeur.donnee.ExoplaneteDAO;
+import editeur.modele.Exoplanete;
 import editeur.vue.NavigateurDePages;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
@@ -46,6 +47,9 @@ public class ControleurExoplanete implements Initializable{
 	
 	public void recevoirActionEnregistrerAjout(ActionEvent evenement)
 	{
+		// demander a la vue ses donnees
+		Exoplanete exoplanete = this.navigateur.getPageAjouterExoplanete().lireExoplanete();
+		
 		this.navigateur.naviguerVersPageListeExoplanete();		
 	}
 	
