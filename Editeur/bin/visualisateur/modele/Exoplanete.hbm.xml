@@ -1,0 +1,16 @@
+<hibernate-mapping>
+   <class name="visualisateur.modele.Exoplanete" table="exoplanete">
+      <id name="id" type="int" column="id">
+         <generator class="native"/>
+      </id>
+      <property name="nom" column="nom" type="string"/>
+      <property name="etoile" column="etoile" type="string"/>
+      <property name="classe" column="classe" type="string"/>
+      <property name="masse" column="masse" type="string"/>
+      <property name="rayon" column="rayon" type="string"/>
+      <property name="flux" column="flux" type="string"/>
+      <property name="temperature" column="temperature" type="string"/>
+      <property name="periode" column="periode" type="string"/>
+      <property name="distance" column="distance" type="string"/>      
+   </class>
+</hibernate-mapping>
