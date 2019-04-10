@@ -1,5 +1,5 @@
 <hibernate-mapping>
-   <class name="visualisateur.modele.Exoplanete" table="exoplanete">
+   <class name="editeur.modele.Exoplanete" table="exoplanete">
       <id name="id" type="int" column="id">
          <generator class="native"/>
       </id>
