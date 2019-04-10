@@ -27,7 +27,10 @@ public class PageListeExoplanete extends Page {
 		grilleDesPlanetes.setItems(items);
 	}
 
-
+	public String lireExoplaneteSelectionnee()
+	{
+		ListView grilleDesPlanetes = (ListView) this.lookup("#liste-exoplanetes");
+		return grilleDesPlanetes.getSelectionModel().getSelectedItem().toString();		
+	}
+	
 }
-
-// laliste.getSelectionModel().getSelectedItem();

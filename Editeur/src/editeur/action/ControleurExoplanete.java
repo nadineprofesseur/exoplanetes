@@ -1,5 +1,8 @@
 package editeur.action;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 import editeur.donnee.ExoplaneteDAO;
@@ -12,10 +15,11 @@ public class ControleurExoplanete implements Initializable{
 
 	protected NavigateurDePages navigateur;
 	protected ExoplaneteDAO exoplaneteDAO;
+	
 	public ControleurExoplanete()
 	{
 		System.out.println("new ControleurExoplanete()");
-		
+
 		this.exoplaneteDAO = new ExoplaneteDAO();
 		this.navigateur = NavigateurDePages.getInstance();
 	}
@@ -37,6 +41,13 @@ public class ControleurExoplanete implements Initializable{
 	
 	public void recevoirActionNaviguerPageEditer(ActionEvent evenement)
 	{
+		// Recuperer la planete selectionnee dans la page liste
+		String nom = this.navigateur.getPageListeExoplanete().lireExoplaneteSelectionnee(); 
+		Exoplanete exoplanete = this.exoplaneteDAO.lireExoplaneteSelonNom(nom);
+		System.out.println(exoplanete.getEtoile());
+		// Afficher la bonne planete dans la page editer
+		
+		// Naviguer vers la page editer
 		this.navigateur.naviguerVersPageEditer();
 	}
 	
