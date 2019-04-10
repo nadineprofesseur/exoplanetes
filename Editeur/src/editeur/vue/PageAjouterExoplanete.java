@@ -18,11 +18,13 @@ public class PageAjouterExoplanete extends Page {
 		Exoplanete exoplanete = new Exoplanete();
 	
 		TextField champsNom = (TextField) this.lookup("#champs-nom");
-		String nom = champsNom.getText();
-		exoplanete.setNom(nom);
+		exoplanete.setNom(champsNom.getText());
+		champsNom.setText(""); // remet le champs à vide pour la prochaine
 		TextField champsEtoile = (TextField) this.lookup("#champs-etoile");
-		String etoile = champsEtoile.getText();
-		exoplanete.setEtoile(etoile);
+		exoplanete.setEtoile(champsEtoile.getText());
+		champsEtoile.setText("");
+
+		// TODO lire et vider tous les champs
 		
 		//System.out.println("Nouvelle planete " + nom + " dans le soleil " + nom);
 		return exoplanete;
