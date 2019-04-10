@@ -3,7 +3,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import visualisateur.modele.Exoplanete;
 
@@ -14,11 +17,14 @@ public class PageListeExoplanete extends Page {
 	}
 	public void afficherListeExoplanetes(List<Exoplanete> listeExoplanetes)
 	{
-		TextArea espaceTexte = (TextArea) this.lookup("#liste-exoplanetes");
+		ObservableList<String> items = FXCollections.observableArrayList ();
+		ListView grilleDesPlanetes = (ListView) this.lookup("#liste-exoplanetes");
 		for(Exoplanete exoplanete : listeExoplanetes)
 		{
-			espaceTexte.appendText(exoplanete.getNom() + "\n");					
+			items.add(exoplanete.getNom());
+			//espaceTexte.appendText(exoplanete.getNom() + "\n");					
 		}
+		grilleDesPlanetes.setItems(items);
 	}
 
 
