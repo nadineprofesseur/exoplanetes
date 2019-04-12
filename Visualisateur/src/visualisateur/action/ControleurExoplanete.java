@@ -12,6 +12,7 @@ public class ControleurExoplanete implements Initializable{
 
 	protected NavigateurDePages navigateur;
 	protected ExoplaneteDAO exoplaneteDAO;
+	
 	public ControleurExoplanete()
 	{
 		System.out.println("new ControleurExoplanete()");
