@@ -14,7 +14,11 @@
         <Font name="System Bold" size="30.0" />
       </font>
     </Label>
-    <ListView id="liste-exoplanetes" layoutX="38.0" layoutY="163.0" prefHeight="200.0" prefWidth="200.0" />
-    <Button id="actionNaviguerPageExoplanete" layoutX="169.0" layoutY="350.0" mnemonicParsing="false" text="Ouvrir la page Exoplanete"  onAction="#recevoirActionNaviguerPageExoplanete"/>
+        <VBox layoutX="25.0" layoutY="44.0" prefHeight="310.0" prefWidth="451.0">
+          <children>
+		    <ListView id="liste-exoplanetes" layoutX="38.0" layoutY="163.0" prefHeight="200.0" prefWidth="200.0" />
+		    <Button id="actionNaviguerPageExoplanete" layoutX="169.0" layoutY="350.0" mnemonicParsing="false" text="Ouvrir la page Exoplanete"  onAction="#recevoirActionNaviguerPageExoplanete"/>
+          </children>
+        </VBox>
   </children>
 </AnchorPane>
