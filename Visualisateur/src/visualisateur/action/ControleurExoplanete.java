@@ -1,5 +1,6 @@
 package visualisateur.action;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import visualisateur.modele.Exoplanete;
@@ -23,7 +24,16 @@ public class ControleurExoplanete implements Initializable{
 	
 	public void initialiser()
 	{
-		this.navigateur.getPageListeExoplanete().afficherListeExoplanetes(exoplaneteDAO.listerExoplanete());		
+		this.navigateur.getPageListeExoplanete().afficherListeExoplanetes(exoplaneteDAO.listerExoplanete());	
+		
+		AlgorithmeRecherche algorithme = new AlgorithmeRechercheProfesseurVadeboncoeur(exoplaneteDAO.listerExoplanete());
+		
+		// TEST
+		List<Exoplanete> planetesTrouvees = algorithme.executer();
+		for(Exoplanete planeteTrouvee : planetesTrouvees)
+		{
+			System.out.println("Planete trouvee " + planeteTrouvee.getNom());
+		}
 	}
 	
 	public void recevoirActionNaviguerPageListeExoplanete(ActionEvent evenement)

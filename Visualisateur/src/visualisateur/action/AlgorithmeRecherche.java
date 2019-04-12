@@ -14,11 +14,12 @@ public class AlgorithmeRecherche {
 		this.listePlanetesFiltrees = this.listePlanetesOriginales = listePlanetes;
 	}
 	
-	public void executer()
+	public List<Exoplanete> executer()
 	{
 		this.listePlanetesFiltrees = this.trouverLesPlanetesHabitables(this.listePlanetesFiltrees);
 		this.listePlanetesFiltrees = this.trouverLesPlanetesAtteignables(this.listePlanetesFiltrees);
 		this.listePlanetesFiltrees = this.trouverLesPlanetesAnalysables(this.listePlanetesFiltrees);
+		return this.listePlanetesFiltrees;
 	}
 	
 	public List<Exoplanete> trouverLesPlanetesHabitables(List<Exoplanete> listeExoplanetes)
