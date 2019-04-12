@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import editeur.modele.Exoplanete;
@@ -35,6 +36,30 @@ public class ExoplaneteDAO {
 		return instance;
 	}
 	// Singleton fin
+	
+	public void ajouter(Exoplanete exoplanete)
+	{
+		//Transaction transaction = session.beginTransaction();
+		session.save(exoplanete);
+		//transaction.commit();		
+	}
+	
+	public void enregistrer(Exoplanete exoplanete)
+	{
+		//Transaction transaction = session.beginTransaction();
+		session.update(exoplanete);	
+		System.out.println("Enregistrer la nouvelle planete " + exoplanete.getNom());
+		//transaction.commit();		
+	}
+	
+	public void effacer(int id)
+	{
+		//Transaction transaction = session.beginTransaction();
+		//Exoplanete planeteTermine = new Exoplanete();
+		//planeteTermine.setId(id);
+		//session.delete(planeteTermine);
+		//transaction.commit();		
+	}
 	
 	public List<Exoplanete> listerExoplanete()
 	{

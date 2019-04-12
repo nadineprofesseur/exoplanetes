@@ -61,7 +61,8 @@ public class ControleurExoplanete implements Initializable{
 		// demander a la vue ses donnees
 		Exoplanete exoplanete = this.navigateur.getPageAjouterExoplanete().lireExoplanete();
 		System.out.println("Nouvelle planete " + exoplanete.getNom() + " dans l'etoile " + exoplanete.getEtoile());
-
+		this.exoplaneteDAO.ajouter(exoplanete);
+		this.navigateur.getPageListeExoplanete().afficherListeExoplanetes(exoplaneteDAO.listerExoplanete());	// rafraichir la liste de la page liste	
 		this.navigateur.naviguerVersPageListeExoplanete();		
 	}
 	
@@ -70,7 +71,8 @@ public class ControleurExoplanete implements Initializable{
 		// demander a la vue ses donnees
 		Exoplanete exoplanete = this.navigateur.getPageEditerExoplanete().lireExoplanete();
 		System.out.println("Nouvelle planete " + exoplanete.getNom() + " dans l'etoile " + exoplanete.getEtoile());
-		
+		this.exoplaneteDAO.enregistrer(exoplanete);
+		this.navigateur.getPageListeExoplanete().afficherListeExoplanetes(exoplaneteDAO.listerExoplanete());	// rafraichir la liste de la page liste	
 		this.navigateur.naviguerVersPageListeExoplanete();		
 	}
 	
