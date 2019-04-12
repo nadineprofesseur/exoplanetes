@@ -67,6 +67,10 @@ public class ControleurExoplanete implements Initializable{
 	
 	public void recevoirActionEnregistrerEdition(ActionEvent evenement)
 	{
+		// demander a la vue ses donnees
+		Exoplanete exoplanete = this.navigateur.getPageEditerExoplanete().lireExoplanete();
+		System.out.println("Nouvelle planete " + exoplanete.getNom() + " dans l'etoile " + exoplanete.getEtoile());
+		
 		this.navigateur.naviguerVersPageListeExoplanete();		
 	}
 	

@@ -14,22 +14,23 @@ import editeur.modele.Exoplanete;
 public class ExoplaneteDAO {
 	
 	protected Map<String, Exoplanete> planetesSelonNom; // copie de la liste mappée par nom, car le nom est unique - pour un accès rapide
-
+	protected Configuration configuration;
+	protected Session session;
+	
 	public ExoplaneteDAO()
 	{
 		this.planetesSelonNom = new HashMap<String, Exoplanete>();		
+		this.configuration = new Configuration();
+		this.configuration.addClass(editeur.modele.Exoplanete.class);
+		SessionFactory generateurSession = this.configuration.buildSessionFactory();
+		this.session = generateurSession.openSession();
 	}
 	
 	public List<Exoplanete> listerExoplanete()
 	{
 		System.out.println("ExoplaneteDAO.listerExoplanete()");
 		List<Exoplanete> listeExoplanete = new ArrayList<Exoplanete>();
-		
-		Configuration configuration = new Configuration();
-		configuration.addClass(editeur.modele.Exoplanete.class);
-		SessionFactory generateurSession = configuration.buildSessionFactory();
-		Session session = generateurSession.openSession();
-		
+				
 		Iterator visiteurExoplanete = session.createQuery("from Exoplanete ").iterate();
 		while(visiteurExoplanete.hasNext())
 		{
