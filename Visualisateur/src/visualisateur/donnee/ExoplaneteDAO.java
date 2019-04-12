@@ -18,7 +18,7 @@ public class ExoplaneteDAO {
 	protected Configuration configuration;
 	protected Session session;
 	
-	public ExoplaneteDAO()
+	protected ExoplaneteDAO()
 	{
 		this.planetesSelonNom = new HashMap<String, Exoplanete>();		
 		this.configuration = new Configuration();
@@ -26,6 +26,16 @@ public class ExoplaneteDAO {
 		SessionFactory generateurSession = this.configuration.buildSessionFactory();
 		this.session = generateurSession.openSession();
 	}
+	
+	// Singleton car le framework instancie plusieurs controleur qui chacun utilisent le dao, on veut la meme session
+	// Singleton debut
+	protected static ExoplaneteDAO instance = null;
+	public static ExoplaneteDAO getInstance() 
+	{
+		if(instance == null) instance = new ExoplaneteDAO();
+		return instance;
+	}
+	// Singleton fin
 	
 	public List<Exoplanete> listerExoplanete()
 	{

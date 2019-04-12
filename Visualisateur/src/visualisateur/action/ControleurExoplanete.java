@@ -17,7 +17,7 @@ public class ControleurExoplanete implements Initializable{
 	{
 		System.out.println("new ControleurExoplanete()");
 		
-		this.exoplaneteDAO = new ExoplaneteDAO();
+		this.exoplaneteDAO = ExoplaneteDAO.getInstance();
 		this.navigateur = NavigateurDePages.getInstance();
 	}
 	
