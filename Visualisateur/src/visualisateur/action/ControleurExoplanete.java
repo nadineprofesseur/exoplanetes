@@ -2,6 +2,7 @@ package visualisateur.action;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import visualisateur.modele.Exoplanete;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import visualisateur.donnee.ExoplaneteDAO;
@@ -30,6 +31,13 @@ public class ControleurExoplanete implements Initializable{
 	}
 	public void recevoirActionNaviguerPageExoplanete(ActionEvent evenement)
 	{
+		// Recuperer la planete selectionnee dans la page liste
+		String nom = this.navigateur.getPageListeExoplanete().lireExoplaneteSelectionnee(); 
+		Exoplanete exoplanete = this.exoplaneteDAO.lireExoplaneteSelonNom(nom);
+		//System.out.println(exoplanete.getEtoile());
+		// Afficher la bonne planete dans la page editer
+		this.navigateur.getPageExoplanete().afficherExoplanete(exoplanete);
+		
 		this.navigateur.naviguerVersPageExoplanete();
 	}
 

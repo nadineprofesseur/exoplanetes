@@ -25,6 +25,10 @@ public class NavigateurDePages extends Application {
 		this.controleur = new ControleurExoplanete();		
 	}
 
+	public PageExoplanete getPageExoplanete() {
+		return pageExoplanete;
+	}
+
 	public PageListeExoplanete getPageListeExoplanete() {
 		return pageListeExoplanete;
 	}
